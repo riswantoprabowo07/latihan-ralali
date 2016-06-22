@@ -1,2 +1,9 @@
-# latihan-ralali
-Untuk kebutuhan training karyawan ralali
+# Latihan Web
+
+## Tampilan Home Page
+
+![](mocks/list.jpg)
+
+## Tampilan Detail Page
+
+![](mocks/detail.jpg)
