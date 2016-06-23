@@ -53,7 +53,7 @@
 
 .list-menu{
 	display: inline-block;
-	padding-bottom:0px; 
+	padding-top: 10px;
 }
 
 .list-kiri{
@@ -68,4 +68,11 @@
 
 .list-bawah{
 	float: right;
+}
+
+hr {
+    display: block;
+    border: 1px;
+    border-top: 2px solid;
+    padding: 0; 
 }
