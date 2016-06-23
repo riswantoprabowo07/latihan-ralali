@@ -24,7 +24,6 @@
 .list{
 	border-bottom: 2px solid;
 	padding-top: 10px;
-	max-width: 100%;
 }
 
 .score{
@@ -44,4 +43,29 @@
 .action{
 	padding-left: 450px;
 	padding-bottom: 10px;
+}
+
+.list-detail{
+	border-bottom: 2px solid;
+	padding-top: 10px;
+	width: 100%;
+}
+
+.list-menu{
+	display: inline-block;
+	padding-bottom:0px; 
+}
+
+.list-kiri{
+	float: left;
+	padding-left: 30px;
+}
+
+.list-kanan{
+	padding-right: 30px;
+	padding-left: 80px;
+}
+
+.list-bawah{
+	float: right;
 }
