@@ -1,55 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp" ng-view>
 	<head>
 		<meta charset="utf-8" />
 		<title>Latihan-Ralali</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/angular.js"></script>
+    	<script type="text/javascript" src="js/angular-route.js"></script>
+    	<script type="text/javascript" src="js/app.js"></script>
+    	<base href="/"></base>
 	</head>
-	<body id="container">
-		<header class="center">
-			<h1>Simple Stack Exchange</h1>
-			<input type="text" name="" style="width:80%;">
-			<input type="submit" name="" value="Search">
-			<p>Cannot find what you are looking for? <a style="color:orange;">Ask here</a></p>
-		</header>
-		<div class="wrapper">
-			<p>Recently Asked Questions</p>
-			<hr/>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
-			</div>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
-			</div>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
-			</div>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
-			</div>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
-			</div>
-			<div class="list">
-				<div class="score">0 <br/> Votes</div>
-				<div class="score">0 <br/> Answers</div>
-				<div class="list-item">the question topic goes here</div>
-				<div class="action">asked by <a style="color:blue;">name</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
+	<body>
+		<div id="container">
+			<header class="center">
+				<h1>Simple Stack Exchange</h1>
+				<input type="text" name="" style="width:80%;">
+				<input type="submit" name="" value="Search">
+				<p>Cannot find what you are looking for? <a style="color:orange;">Ask here</a></p>
+			</header>
+			<div class="wrapper">
+				<p>Recently Asked Questions</p>
+				<hr/>
+				<div class="list" ng-repeat="x in articles">
+					<div class="score">{{x.vote}} <br/> Vote</div>
+					<div class="score">{{x.answer}} <br/> Answers</div>
+					<div class="list-item"><a ng-href="./latihan-ralali/detail.html?id={{x.id}}">{{x.title}}</a></div>
+					<div class="action">asked by <a style="color:blue;">{{x.author}}</a> | <a style="color:yellow;">edit</a> | <a style="color:red;">delete</a></div>
+				</div>
 			</div>
 		</div>
 	</body>

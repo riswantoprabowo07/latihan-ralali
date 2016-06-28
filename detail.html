@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp" ng-view>
     <head>
         <meta charset="utf-8" />
         <title>Latihan-Ralali</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/angular-route.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <base href="/"></base>
     </head>
     <header>
         <h1 style="text-align:center;">Simple Stack Exchange</h1>
     </header>
-
-    <body id="container">
-        <div class="list-detail">
-            <h2>The question topic goes here</h2>
+    <body>
+        <div id="container">
+            <div class="list-detail">
+                <h2>The question topic goes here</h2>
+                <hr/>
+            </div>
+            <!-- 1 The question -->
+            <div class="list-menu">
+                <div class="list-kiri">
+                    <h1>{{numTest}}</h1>
+                </div>
+                <div class="list-kanan">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="list-bawah">
+                    <p>asked by &lt;username&gt; at &lt;datetime&gt; | <a style="color: orange;"> edit</a> | <a style="color: red;"> delete</a></p>
+                </div>
+            </div>
+            <!-- 1 Answers -->
+            <div class="list-detail">
+                <h2>1 Answer</h2>
+                <hr/>
+            </div>
+            <div class="list-menu">
+                <div class="list-kiri">
+                    <h1>6</h1>
+                </div>
+                <div class="list-kanan">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="list-bawah">
+                    <p>asked by &lt;username&gt; at &lt;datetime&gt;</p>
+                </div>
+            </div>
             <hr/>
-        </div>
-        <!-- 1 The question -->
-        <div class="list-menu">
-            <div class="list-kiri">
-                <h1>2</h1>
+            <div>
+                <table width="100%">
+                    <h1>Your Answer</h1>
+                    <tr>
+                        <td>
+                            <input type="email" name="name" placeholder=" Name" style="width:100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" name="email" placeholder=" Email" style="width:100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea placeholder=" Content"></textarea>
+                        </td>
+                    </tr>
+                </table>
             </div>
-            <div class="list-kanan">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div class="list-bawah">
-                <p>asked by &lt;username&gt; at &lt;datetime&gt; | <a style="color: orange;"> edit</a> | <a style="color: red;"> edit</a></p>
-            </div>
-        </div>
-        <!-- 1 Answers -->
-        <div class="list-detail">
-            <h2>1 Answer</h2>
-            <hr/>
-        </div>
-        <div class="list-menu">
-            <div class="list-kiri">
-                <h1>6</h1>
-            </div>
-            <div class="list-kanan">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div class="list-bawah">
-                <p>asked by &lt;username&gt; at &lt;datetime&gt;</p>
-            </div>
-        </div>
-        <hr/>
-        <div>
-            <table width="100%">
-                <h1>Your Answer</h1>
-                <tr>
-                    <td>
-                        <input type="email" name="name" placeholder=" Name" style="width:100%;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="email" name="email" placeholder=" Email" style="width:100%;">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea placeholder=" Content"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="button" name="Post" value="post">
-                    </td>
-                </tr>
-            </table>
         </div>
     </body>
 </html>
