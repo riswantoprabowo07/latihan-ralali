@@ -35,13 +35,12 @@
 
 .list-item{
 	display: inline-block;
-	position: absolute;
-	padding-left: 100px;
+	width: 50%;
 	text-align: center;
 }
 
 .action{
-	padding-left: 450px;
+	text-align: right;
 	padding-bottom: 10px;
 }
 
@@ -54,7 +53,11 @@
 }
 
 .list-menu{
-	display: inline-block;
+	padding-top: 10px;
+}
+
+.list-menu-2{
+	border-bottom: 2px solid;
 	padding-top: 10px;
 }
 
