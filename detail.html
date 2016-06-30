@@ -21,7 +21,11 @@
             <!-- 1 The question -->
             <div class="list-menu">
                 <div class="list-kiri">
-                    <h1>{{idx.vote}}</h1>
+                    <h1>
+                        <img ng-src="{{idx.status==='up'&&'latihan-ralali/asset/up-yellow.png'||'latihan-ralali/asset/up-blue.png'}}" ng-click="up()" style="width:30px;"><br/>
+                            {{idx.vote}}<br/>
+                        <img ng-src="{{idx.status==='down'&&'latihan-ralali/asset/down-yellow.png'||'latihan-ralali/asset/down-blue.png'}}" ng-click="down()"  style="width:30px;">
+                    </h1>
                 </div>
                 <div class="list-kanan">
                     <p>{{idx.description}}</p>
