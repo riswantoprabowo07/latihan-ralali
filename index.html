@@ -13,14 +13,14 @@
 		<div id="container">
 			<header class="center">
 				<h1>Simple Stack Exchange</h1>
-				<input type="text" name="" style="width:80%;">
-				<input type="submit" name="" value="Search">
+				<input type="text" name="" ng-model="search" style="width:80%;">
+				<input type="submit" name="" value="Search" >
 				<p>Cannot find what you are looking for? <a style="color:orange;">Ask here</a></p>
 			</header>
 			<div class="wrapper">
 				<p>Recently Asked Questions</p>
 				<hr/>
-				<div class="list" ng-repeat="x in articles">
+				<div class="list" ng-repeat="x in articles | filter:search">
 					<div class="score">{{x.vote}} <br/> Vote</div>
 					<div class="score">{{x.answer}} <br/> Answers</div>
 					<div class="list-item"><a ng-href="./latihan-ralali/detail.html?id={{x.id}}">{{x.title}}</a></div>
